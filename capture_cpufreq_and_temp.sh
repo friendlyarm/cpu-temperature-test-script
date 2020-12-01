@@ -16,3 +16,5 @@ do
     sleep 1
 done
 ps | grep dd > /tmp/cpufan_testing_done
+
+for dd in $(jobs -p) ; do kill ${dd} ; done
