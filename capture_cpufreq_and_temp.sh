@@ -5,7 +5,7 @@ rm -f /tmp/cpu_temperature.txt
 
 for j in $(seq $(grep -c processor /proc/cpuinfo))
 do
-    dd if=/dev/zero of=/dev/null bs=1M&
+    dd if=/dev/zero of=/dev/null bs=1 &
 done 
 
 ps | grep dd > /tmp/cpufan_testing_started
